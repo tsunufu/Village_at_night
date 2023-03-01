@@ -7,6 +7,7 @@ public class StageGenerator : MonoBehaviour
     [SerializeField] private GameObject stage;
 
     private float interval = 3.0f;
+    private int generateCount = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +18,11 @@ public class StageGenerator : MonoBehaviour
 
     private IEnumerator CreateStage(float interval)
     {
-        yield return new WaitForSeconds(interval);
-        Instantiate(stage, new Vector3(stage.transform.position.x + 50, stage.transform.position.y, stage.transform.position.z), Quaternion.identity);
+        while (true)
+        {
+            yield return new WaitForSeconds(interval);
+            Instantiate(stage, new Vector3(stage.transform.position.x + (generateCount * 50), stage.transform.position.y, stage.transform.position.z), Quaternion.identity);
+            generateCount++;
+        }
     }
 }
