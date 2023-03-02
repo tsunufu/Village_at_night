@@ -27,12 +27,12 @@ public class ObstacleGenerator : MonoBehaviour
             randomInstantiate = Random.Range(0,2);
             if (randomInstantiate == 0)
             {
-                Instantiate(leftObstacle, new Vector3(leftObstacle.transform.position.x + (generateCount * 50), leftObstacle.transform.position.y, leftObstacle.transform.position.z), Quaternion.Euler(0, -90, 0));
+                Instantiate(leftObstacle, new Vector3(leftObstacle.transform.position.x + (generateCount * 40), leftObstacle.transform.position.y, leftObstacle.transform.position.z), Quaternion.Euler(0, -90, 0));
                 generateCount++;
             }
             else if(randomInstantiate == 1)
             {
-                Instantiate(rightObstacle, new Vector3(rightObstacle.transform.position.x + (generateCount * 50), rightObstacle.transform.position.y, rightObstacle.transform.position.z), Quaternion.Euler(0, -90, 0));
+                Instantiate(rightObstacle, new Vector3(rightObstacle.transform.position.x + (generateCount * 40), rightObstacle.transform.position.y, rightObstacle.transform.position.z), Quaternion.Euler(0, -90, 0));
                 generateCount++;
             }
         }
