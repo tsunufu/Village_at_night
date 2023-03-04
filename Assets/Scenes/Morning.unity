@@ -721,6 +721,8 @@ GameObject:
   - component: {fileID: 519504119}
   - component: {fileID: 519504118}
   - component: {fileID: 519504120}
+  - component: {fileID: 519504122}
+  - component: {fileID: 519504121}
   m_Layer: 0
   m_Name: Flowchart
   m_TagString: Untagged
@@ -753,8 +755,9 @@ MonoBehaviour:
     width: 1114
     height: 859
   selectedBlocks:
-  - {fileID: 519504119}
-  selectedCommands: []
+  - {fileID: 519504122}
+  selectedCommands:
+  - {fileID: 519504121}
   variables: []
   description: 
   stepPause: 0
@@ -890,14 +893,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 226.79758
-    y: 120.64296
-    width: 118.26289
+    x: 235.96721
+    y: 71.738205
+    width: 154.94147
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
   useCustomTint: 0
   itemId: 2
-  blockName: New Block1
+  blockName: Penguin_Morning1
   description: 
   eventHandler: {fileID: 519504120}
   commandList:
@@ -905,7 +908,7 @@ MonoBehaviour:
   suppressAllAutoSelections: 0
 --- !u!114 &519504120
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -918,6 +921,60 @@ MonoBehaviour:
   parentBlock: {fileID: 519504119}
   suppressBlockAutoSelect: 0
   message: PenguinChat1
+--- !u!114 &519504121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519504112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  storyText: "\u4FB5\u7565\u8005\u306F\u3044\u3064\u3084\u3063\u3066\u304F\u308B\u304B\u308F\u304B\u3089\u3093\u305E\u3044\n"
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  waitForVO: 0
+  setSayDialog: {fileID: 0}
+--- !u!114 &519504122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519504112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 435.66156
+    y: 73.77578
+    width: 155.9603
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 4
+  blockName: Penguin_Morning2
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 519504121}
+  suppressAllAutoSelections: 0
 --- !u!1001 &534280688
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3104,7 +3161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4549644435828676, guid: c717f817a496cf247a92b830b355a407, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.77
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4549644435828676, guid: c717f817a496cf247a92b830b355a407, type: 3}
       propertyPath: m_LocalPosition.y

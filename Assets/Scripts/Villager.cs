@@ -8,7 +8,14 @@ public class Villager : Character
 
     protected override void Talk()
     {
-        chat.SendFungusMessage("PenguinChat1");
+        if (timeState == TimeState.Morning)
+        {
+            chat.SendFungusMessage("PenguinChat1");
+        }
+        else if(timeState == TimeState.Night)
+        {
+
+        }
     }
 
 
