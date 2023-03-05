@@ -6,7 +6,6 @@ public class ParticleMove : MonoBehaviour
 {
     [SerializeField] private float speed;
 
-
     private void FixedUpdate()
     {
         transform.position += new Vector3(speed * Time.deltaTime, 0, 0);
@@ -17,6 +16,7 @@ public class ParticleMove : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             print("衝突");
+            FadeManager.Instance.LoadScene("Night", 2.0f);
         }
     }
 }
