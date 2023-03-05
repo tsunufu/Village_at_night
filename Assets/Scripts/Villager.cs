@@ -30,4 +30,9 @@ public class Villager : Character
         }
     }
 
+    protected override void ChangeScene()
+    {
+        FadeManager.Instance.LoadScene("Escape", 2.0f);
+    }
+
 }

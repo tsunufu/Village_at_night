@@ -27,4 +27,10 @@ public class TrainningVillager : Character
             }
         }
     }
+
+    protected override void ChangeScene()
+    {
+        print("aaa");
+        FadeManager.Instance.LoadScene("FallVirus", 2.0f);
+    }
 }

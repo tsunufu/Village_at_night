@@ -30,4 +30,6 @@ public abstract class Character : MonoBehaviour
 
     protected abstract void Talk();
 
+    protected abstract void ChangeScene();
+
 }

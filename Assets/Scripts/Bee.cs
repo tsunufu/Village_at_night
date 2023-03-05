@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class Bee : Character
 {
@@ -26,8 +25,9 @@ public class Bee : Character
         }
     }
 
-    private void ChangeNight()
+    protected override void ChangeScene()
     {
+        print("aaavvv");
         FadeManager.Instance.LoadScene("Night", 2.0f);
     }
 
