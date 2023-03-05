@@ -14,7 +14,7 @@ public class Villager : Character
         }
         else if(timeState == TimeState.Night)
         {
-
+            chat.SendFungusMessage("PenguinChatAtNight");
         }
     }
 

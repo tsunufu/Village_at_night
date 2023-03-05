@@ -12,7 +12,7 @@ public class TrainningVillager : Character
         }
         else if (timeState == TimeState.Night)
         {
-
+            chat.SendFungusMessage("TrainPenguinChatAtNight");
         }
     }
 
