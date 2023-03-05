@@ -20,4 +20,5 @@ public class TimeController : MonoBehaviour
             timeText.text = "Time Up!";
         }
     }
+
 }

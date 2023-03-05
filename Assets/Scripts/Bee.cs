@@ -28,7 +28,7 @@ public class Bee : Character
 
     private void ChangeNight()
     {
-
+        FadeManager.Instance.LoadScene("Night", 2.0f);
     }
 
 }
