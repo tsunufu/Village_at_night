@@ -6,7 +6,19 @@ public class CharacterMove : MonoBehaviour
 {
     [SerializeField] Animator anim;
 
-    [SerializeField] private float moveSpeed = 3f;
+    [SerializeField] private float moveSpeed;
+
+    private float time;
+
+    private void Update()
+    {
+        time += Time.deltaTime;
+
+        if (Mathf.Floor(time) % 30 == 0)
+        {
+            moveSpeed += 0.01f;
+        }
+    }
 
     private void FixedUpdate()
     {

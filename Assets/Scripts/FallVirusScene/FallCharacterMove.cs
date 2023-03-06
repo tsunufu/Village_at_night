@@ -22,5 +22,11 @@ public class FallCharacterMove : MonoBehaviour
         // Playerを移動させる
         transform.Translate(moveValue);
         anim.SetBool("SetWalk", true);
+
+        //if(Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    transform.position = new Vector3(Time.fixedDeltaTime * moveSpeed, 0, 0);
+        //    transform.Rotate(0, 90, 0);
+        //}
     }
 }

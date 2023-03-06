@@ -18,6 +18,7 @@ public class TimeController : MonoBehaviour
         if(timeLimit < 0)
         {
             timeText.text = "Time Up!";
+            FadeManager.Instance.LoadScene("Night", 2.0f);
         }
     }
 

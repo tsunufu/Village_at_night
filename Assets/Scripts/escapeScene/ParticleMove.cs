@@ -5,6 +5,17 @@ using UnityEngine;
 public class ParticleMove : MonoBehaviour
 {
     [SerializeField] private float speed;
+    private float time; 
+
+    private void Update()
+    {
+        time += Time.deltaTime;
+
+        if (Mathf.Floor(time) % 30 == 0)
+        {
+            speed += 0.01f;
+        }
+    }
 
     private void FixedUpdate()
     {
