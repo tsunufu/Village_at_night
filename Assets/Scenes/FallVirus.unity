@@ -433,6 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3219efe3fd31b4d9a983bb91f4428142, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timeLimit: 20
   timeText: {fileID: 1589969408}
 --- !u!4 &799556978
 Transform:
@@ -617,6 +618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 1090219386143568, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
+  timeController: {fileID: 799556977}
 --- !u!4 &1422494049
 Transform:
   m_ObjectHideFlags: 0

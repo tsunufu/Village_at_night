@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class TimeController : MonoBehaviour
 {
-    private float timeLimit = 20.0f;
+    public float timeLimit = 20.0f;
 
     [SerializeField] private Text timeText;
 
