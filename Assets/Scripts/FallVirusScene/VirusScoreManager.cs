@@ -9,6 +9,12 @@ public class VirusScoreManager : MonoBehaviour
     private int myScore;
     //ゲーム記録用のスコア
     public int score;
+    public static int finalScore;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
 
     private void Start()
     {
@@ -21,6 +27,12 @@ public class VirusScoreManager : MonoBehaviour
     public void UpdateScoreText()
     {
         scoreText.text = "SCORE : " + score.ToString();
+    }
+
+    public void FinalScore()
+    {
+        finalScore = score;
+        print(finalScore);
     }
 
 }

@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Penguin
+  - Enemy
   layers:
   - Default
   - TransparentFX

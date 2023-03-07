@@ -8,7 +8,7 @@ public class FallCharacterMove : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 3f;
 
-    [SerializeField] VirusScoreManager virusScoreManager;
+    [SerializeField] private VirusScoreManager virusScoreManager;
 
     private void FixedUpdate()
     {
