@@ -13,6 +13,11 @@ public class EscapeScoreManager : MonoBehaviour
 
     [SerializeField] private Text scoreText;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+    }
+
     void Start()
     {
         StartCoroutine(AddScore(interval));
@@ -31,7 +36,10 @@ public class EscapeScoreManager : MonoBehaviour
 
     private void UpdateScoreText()
     {
-        scoreText.text = "SCORE : " + score.ToString();
+        if (scoreText != null)
+        {
+            scoreText.text = "SCORE : " + score.ToString();
+        }
     }
 
     public void RecordScore()
