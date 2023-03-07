@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class EscapeScoreManager : MonoBehaviour
 {
     private int score;
+    //スコアの加算間隔
     private float interval = 2.0f;
+    //中間スコアをstaticな変数で保存
+    public static int middleScore;
+
     [SerializeField] private Text scoreText;
+
     void Start()
     {
         StartCoroutine(AddScore(interval));
@@ -28,4 +33,11 @@ public class EscapeScoreManager : MonoBehaviour
     {
         scoreText.text = "SCORE : " + score.ToString();
     }
+
+    public void RecordScore()
+    {
+        middleScore = score;
+        print(middleScore);
+    }
+
 }

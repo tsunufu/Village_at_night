@@ -1,11 +1,16 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class ParticleMove : MonoBehaviour
 {
     [SerializeField] private float speed;
-    private float time; 
+    private float time;
+
+    //ゲームオーバー時にEscapeScoreManagerにアクセスしてスコアを記録できるように
+    [SerializeField] private UnityEvent recordScore = new UnityEvent();
 
     private void Update()
     {
@@ -26,8 +31,16 @@ public class ParticleMove : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            print("衝突");
-            FadeManager.Instance.LoadScene("Night", 2.0f);
+            GameOver();
         }
     }
+
+    public void GameOver()
+    {
+        print("衝突");
+        recordScore.Invoke();
+        FadeManager.Instance.LoadScene("Night", 2.0f);
+        
+    }
+
 }
