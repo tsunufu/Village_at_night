@@ -282,6 +282,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 202293049}
   moveSpeed: 3
+  virusScoreManager: {fileID: 1495269924}
 --- !u!95 &202293049 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 9582806, guid: 8280ad2f586477b47ac0d3d3e444e3aa, type: 3}
@@ -310,6 +311,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -2870200864487273769, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1090219386143568, guid: a817c29ea6847604bb2c6c51d9a74bf1, type: 3}
       propertyPath: m_Name
       value: Slime
@@ -843,7 +848,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 84042585}
-  escapeScoreManager: {fileID: 0}
+  score: 0
 --- !u!4 &1495269925
 Transform:
   m_ObjectHideFlags: 0
@@ -1220,6 +1225,10 @@ PrefabInstance:
     - target: {fileID: 175374, guid: 8280ad2f586477b47ac0d3d3e444e3aa, type: 3}
       propertyPath: m_Name
       value: penguin
+      objectReference: {fileID: 0}
+    - target: {fileID: 175374, guid: 8280ad2f586477b47ac0d3d3e444e3aa, type: 3}
+      propertyPath: m_TagString
+      value: Penguin
       objectReference: {fileID: 0}
     - target: {fileID: 475374, guid: 8280ad2f586477b47ac0d3d3e444e3aa, type: 3}
       propertyPath: m_RootOrder

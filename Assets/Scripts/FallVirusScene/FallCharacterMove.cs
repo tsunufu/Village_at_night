@@ -8,6 +8,8 @@ public class FallCharacterMove : MonoBehaviour
 
     [SerializeField] private float moveSpeed = 3f;
 
+    [SerializeField] VirusScoreManager virusScoreManager;
+
     private void FixedUpdate()
     {
         PlayerMove();
@@ -22,11 +24,16 @@ public class FallCharacterMove : MonoBehaviour
         // Playerを移動させる
         transform.Translate(moveValue);
         anim.SetBool("SetWalk", true);
+    }
 
-        //if(Input.GetKeyDown(KeyCode.RightArrow))
-        //{
-        //    transform.position = new Vector3(Time.fixedDeltaTime * moveSpeed, 0, 0);
-        //    transform.Rotate(0, 90, 0);
-        //}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Enemy")
+        {
+            print("衝突");
+            virusScoreManager.score--;
+            Destroy(other.gameObject);
+            virusScoreManager.UpdateScoreText();
+        }
     }
 }

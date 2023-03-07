@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/FallVirus.unity
     guid: b49b71dba30b2489bb4f17a9eddd3fe9
   - enabled: 1
-    path: Assets/Scenes/escape.unity
+    path: Assets/Scenes/Escape.unity
     guid: 7bca0388f99794503a4026ce7d0b10cd
+  - enabled: 1
+    path: Assets/Scenes/Result.unity
+    guid: d1889a1a26e0043538785bdb47c1cfe7
   m_configObjects: {}
