@@ -12,6 +12,11 @@ public class TimeController : MonoBehaviour
 
     [SerializeField] private UnityEvent finalScore = new UnityEvent();
 
+    private void Start()
+    {
+        StartCoroutine(ChangeResult());
+    }
+
     void Update()
     {
         timeLimit -= Time.deltaTime;
@@ -26,8 +31,16 @@ public class TimeController : MonoBehaviour
         }
     }
 
-    public void ChangeResult()
+    //public void ChangeResult()
+    //{
+    //    FadeManager.Instance.LoadScene("Result", 2.0f);
+    //    finalScore.Invoke();
+    //}
+
+    public IEnumerator ChangeResult()
     {
+        yield return new WaitForSeconds(20.0f);
+
         FadeManager.Instance.LoadScene("Result", 2.0f);
         finalScore.Invoke();
     }
