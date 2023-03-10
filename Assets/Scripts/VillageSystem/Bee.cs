@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class Bee : Character
 {
+    [SerializeField] private SoundManager soundManager;
+    
+    private float interval = 0.01f;
+
     protected override void Talk()
     {
         if (timeState == TimeState.Morning)
@@ -28,6 +32,7 @@ public class Bee : Character
     protected override void ChangeScene()
     {
         print("aaavvv");
+        StartCoroutine(soundManager.VolumeDown(interval));
         FadeManager.Instance.LoadScene("Night", 2.0f);
     }
 
