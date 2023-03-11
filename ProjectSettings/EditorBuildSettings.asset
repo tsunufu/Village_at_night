@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/ComeMonster.unity
+    guid: d19d4d5dcf1134a7e85428b46b7627df
+  - enabled: 1
     path: Assets/Scenes/Night.unity
     guid: bbd7327e976264772b1ed91f0d77b1e6
   - enabled: 1
@@ -23,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Escape.unity
     guid: 7bca0388f99794503a4026ce7d0b10cd
+  - enabled: 1
+    path: Assets/Scenes/Ending.unity
+    guid: e0cf4a22334e248fd9c1fe44073ebc53
   - enabled: 1
     path: Assets/Scenes/Result.unity
     guid: d1889a1a26e0043538785bdb47c1cfe7

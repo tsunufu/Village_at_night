@@ -41,7 +41,7 @@ public class TimeController : MonoBehaviour
     {
         yield return new WaitForSeconds(20.0f);
 
-        FadeManager.Instance.LoadScene("Result", 2.0f);
+        FadeManager.Instance.LoadScene("Ending", 2.0f);
         finalScore.Invoke();
     }
 

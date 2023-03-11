@@ -33,7 +33,7 @@ public class Bee : Character
     {
         print("aaavvv");
         StartCoroutine(soundManager.VolumeDown(interval));
-        FadeManager.Instance.LoadScene("Night", 2.0f);
+        FadeManager.Instance.LoadScene("ComeMonster", 2.0f);
     }
 
 }
