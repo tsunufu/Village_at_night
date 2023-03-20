@@ -12,6 +12,10 @@ public class TimeController : MonoBehaviour
 
     [SerializeField] private UnityEvent finalScore = new UnityEvent();
 
+    [SerializeField] private SoundManager soundManager;
+
+    private float interval = 0.01f;
+
     private void Start()
     {
         StartCoroutine(ChangeResult());
@@ -41,6 +45,7 @@ public class TimeController : MonoBehaviour
     {
         yield return new WaitForSeconds(20.0f);
 
+        StartCoroutine(soundManager.VolumeDown(interval));
         FadeManager.Instance.LoadScene("Ending", 2.0f);
         finalScore.Invoke();
     }

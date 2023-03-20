@@ -9,6 +9,10 @@ public class ParticleMove : MonoBehaviour
     [SerializeField] private float speed;
     private float time;
 
+    [SerializeField] private SoundManager soundManager;
+
+    private float interval = 0.01f;
+
     //ゲームオーバー時にEscapeScoreManagerにアクセスしてスコアを記録できるように
     [SerializeField] private UnityEvent recordScore = new UnityEvent();
 
@@ -39,6 +43,7 @@ public class ParticleMove : MonoBehaviour
     {
         print("衝突");
         recordScore.Invoke();
+        StartCoroutine(soundManager.VolumeDown(interval));
         FadeManager.Instance.LoadScene("Night", 2.0f);
         
     }

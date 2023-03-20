@@ -5,6 +5,9 @@ using Fungus;
 
 public class Villager : Character
 {
+    [SerializeField] private SoundManager soundManager;
+
+    private float interval = 0.01f;
 
     protected override void Talk()
     {
@@ -32,6 +35,7 @@ public class Villager : Character
 
     protected override void ChangeScene()
     {
+        StartCoroutine(soundManager.VolumeDown(interval));
         FadeManager.Instance.LoadScene("Escape", 2.0f);
     }
 

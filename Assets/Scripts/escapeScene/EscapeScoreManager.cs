@@ -38,7 +38,7 @@ public class EscapeScoreManager : MonoBehaviour
     {
         if (scoreText != null)
         {
-            scoreText.text = "SCORE : " + score.ToString();
+            scoreText.text = "SCORE: " + score.ToString();
         }
     }
 
